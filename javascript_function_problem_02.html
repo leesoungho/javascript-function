@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <script type="text/javascript">
+
+       var student = function(name,javascript,python,java,ruby,swift) { 
+
+         this.name = name;
+
+         this.javascript = javascript;
+
+         this.python = python;
+
+         this.java = java;
+
+         this.ruby =ruby;
+
+         this.swift = swift;
+
+         this.average = function(){
+
+              return (javascript + python + java + ruby + swift) / 5;
+
+         }
+
+         this.minmaxFun = function(checkValue){
+
+              var Ary =[javascript,python,java,ruby,swift];
+
+              Ary.sort();
+
+              if(checkValue==1) return Ary[4];
+
+              else if(checkValue==2) return Ary[0];
+
+              else return "잘못된 값입니다.";
+
+         } 
+
+         this.print = function(){
+
+             console.log(name +'학생의 평균 점수는 ' + this.average() + ' , 최고 점수는 ' + this.minmaxFun(1) + ' , 최하 점수는 ' + this.minmaxFun(2) + ' 입니다.');
+
+       }
+
+       }
+
+       var stu1 = new student('A',90,80,50,40,10); 
+
+       var stu2 = new student('B',90,30,100,50,50); 
+
+       var stu3 = new student('C',20,30,60,50,20); 
+
+       stu1.print();
+
+       stu2.print();
+
+       stu3.print();
+     
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>
